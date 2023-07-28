@@ -9,57 +9,73 @@
     <!-- <link rel="stylesheet" href="/css/nav.css"> -->
     <title>Document</title>
     <style>
-        *{
-    margin: 0;
-    padding: 0;
+      *{
+  margin: 0;
+  padding: 0;
 }
 
-nav{
-    display: flex;
-    justify-content: space-between;
-    /* margin: 25px auto; */
-    padding-top: 10px ;
-    padding-bottom: 10px;
-    background-color: green;
-    font-size: 2rem;
+#navi{
+  display: flex;
+  justify-content: space-between;
+  /* margin: 25px auto; */
+  padding-top: 10px ;
+  padding-bottom: 10px;
+  background-color:rgb(29, 92, 29);
+  /* font-size: 2.49rem; */
 }
 
-nav a{
-    padding-left: 20px;
+#navi a{
+  padding-left: 20px;
 }
 
+#navi ul{
+  width: 400px;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  /* font-size: 2rem; */
+  padding-right: 35px;
+}
+
+#navi a{
+ text-decoration: none;
+ color: azure;
+}
 ul{
-    width: 400px;
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    font-size: 1.5rem;
-    padding-right: 35px;
+  list-style: none;
 }
 
-a{
-   text-decoration: none;
-   color: azure;
+#v1{
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  width: 90%;
+ margin: 10px auto;
+  padding: 10px;
+  font-size: 1.5rem;
+  background-color: aqua;
 }
-    </style>
+  </style>
 </head>
 <body>
-    <nav >
-        <a  href="/">Quotes App</a>
-        <div >
-          <ul >
-            <li >
-              <a  href="/quotes">All Quotes</a>
-            </li>
-            <li>
-              <a href="/quotes/new">Add Quote</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-<div class="card">
+
+<nav id="navi">
+  <a  href="/"><h1>Great Quotes</h1></a>
+  <div >
+    <ul >
+      <li >
+        <a  href="/quotes"><h3>All Quotes</h3></a>
+      </li>
+      <li>
+        <a href="/quotes/new"><h3>New Quote</h3></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="card" style="margin: 20px auto; width: 70%; background-color: bisque;">
   <div class="card-body">
-    <p class="card-text">"<%= quote.text %>" - <%= quote.author %></p>
+    <p class="card-text">"<%= quote.text %>"</p>
+    <span><strong> - <%= quote.author %></strong></span>
   </div>
 </div>
 <%- include("footer") %>
